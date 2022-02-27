@@ -45,17 +45,16 @@
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="allthenticate" href="../projects/allthenticate/description.html" />
-    <link rel="prev" title="Initial post (due Friday 2/4)" href="progress-update-initial-post-guidelines.html" />
+    <link rel="next" title="Allthenticate" href="../projects/allthenticate/description.html" />
+    <link rel="prev" title="Second post (due Friday 3/4)" href="progress-update-second-post-guidelines.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -172,6 +171,11 @@
      Initial post (due Friday 2/4)
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="progress-update-second-post-guidelines.html">
+     Second post (due Friday 3/4)
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      How to post project updates
@@ -188,7 +192,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../projects/allthenticate/description.html">
-   allthenticate
+   Allthenticate
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -205,7 +209,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../projects/appfolio/description.html">
-   appfolio
+   AppFolio
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -215,21 +219,26 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../projects/appfolio/update1.html">
-     Update 1 - Project Updates
+     Starting the Project
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../projects/calcofi/description.html">
-   CalCOFI
+   CalCOFI Project
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/calcofi/calcofi-update1.html">
+     CalCOFI Initial Progress and Goal Definition
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -292,7 +301,12 @@
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/envent/projectupdate1.html">
+     Survey Pre-Processing
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -331,7 +345,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../projects/evidation_julio/description.html">
-   evidation (Julio’s team)
+   Evidation (Julio’s team)
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
   <label for="toctree-checkbox-12">
@@ -340,7 +354,7 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../projects/evidation_julio/Update%282-4-22%29.html">
+    <a class="reference internal" href="../projects/evidation_julio/Update2_4_22.html">
      Evidation Update (Julio’s team)
     </a>
    </li>
@@ -353,7 +367,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../projects/nri/description.html">
-   nri
+   NRI
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
   <label for="toctree-checkbox-13">
@@ -652,17 +666,17 @@ To enable Actions:</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="progress-update-initial-post-guidelines.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="progress-update-second-post-guidelines.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Initial post (due Friday 2/4)</p>
+            <p class="prev-next-title">Second post (due Friday 3/4)</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../projects/allthenticate/description.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">allthenticate</p>
+        <p class="prev-next-title">Allthenticate</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

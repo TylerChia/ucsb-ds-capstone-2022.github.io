@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Data Science Capstone 2022</title>
+    <title>Update 3 - (4/29/22) &#8212; Data Science Capstone 2022</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -204,7 +204,7 @@ const thebe_selector_output = ".output, .cell_output"
   Projects
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../allthenticate/description.html">
    Allthenticate
@@ -271,16 +271,16 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="description.html">
    carpedata
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="update1.html">
      Update 1 - (2/4/22)
@@ -289,6 +289,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="update2.html">
      Update 2 - (3/4/22)
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Update 3 - (4/29/22)
     </a>
    </li>
   </ul>
@@ -601,7 +606,34 @@ const thebe_selector_output = ".output, .cell_output"
                 <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recap">
+   RECAP
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#progress">
+   PROGRESS
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preprocessing">
+     PREPROCESSING
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modeling">
+     MODELING
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#validation">
+     VALIDATION
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
             </nav>
@@ -612,7 +644,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1><no title></h1>
+                <h1>Update 3 - (4/29/22)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -621,7 +653,34 @@ const thebe_selector_output = ".output, .cell_output"
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="simple visible nav section-nav flex-column">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recap">
+   RECAP
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#progress">
+   PROGRESS
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preprocessing">
+     PREPROCESSING
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modeling">
+     MODELING
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#validation">
+     VALIDATION
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
                         </nav>
@@ -631,7 +690,100 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  
+  <div class="tex2jax_ignore mathjax_ignore section" id="update-3-4-29-22">
+<h1>Update 3 - (4/29/22)<a class="headerlink" href="#update-3-4-29-22" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="recap">
+<h2>RECAP<a class="headerlink" href="#recap" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="progress">
+<h2>PROGRESS<a class="headerlink" href="#progress" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="preprocessing">
+<h3>PREPROCESSING<a class="headerlink" href="#preprocessing" title="Permalink to this headline">¶</a></h3>
+<p>With regards to preprocessing, we:</p>
+<ul class="simple">
+<li><p>Attempted to drop the six lowest class labels that all had less than 100 observations from our training and validation.</p>
+<ul>
+<li><p>This would allow us to train our models without these small classes and then use the models to see what these small classes would be predicted as. After dropping the smallest classes, we trained both a logistic regression and a support vector machine with the default hyperparameters and used both models to predict over the text for the dropped classes. As a result, both models predicted most of the smaller classes to be N/A: No relevant content, which makes sense as that specific class has the most observations by far.</p></li>
+<li><p>We presented these findings to our sponsor who told us to just drop the six smallest classes from the dataset and to state in our final report that these classes exist in the real world, but are not worth keeping in our models as their frequencies are so low.</p></li>
+</ul>
+</li>
+<li><p>Decided to solely use lemmatization as opposed to creating models for both the lemmatized and stemmed forms of the text.</p></li>
+<li><p>Decided to use a TFIDF-vectorizer as opposed to both a TF-IDF and a CountVectorizer just for simplicity sake.</p></li>
+<li><p>Decided to add in bigrams within our preprocessing pipeline</p>
+<ul>
+<li><p>Instead of using solely using unigrams when vectorizing the text column, we decided to create models with only unigrams as well as models with both unigrams and bigrams.</p></li>
+<li><p>According to our sponsors and mentor, in most NLP related models, the addition of bigrams creates a significant improvement in terms of accuracy.</p></li>
+<li><p>This also created a challenge for us as the number of columns when using both unigrams and bigrams increases from about 400,000 to about 5 million. One solution that our sponsors provided us with is to use different forms of dimensionality reduction.</p></li>
+</ul>
+</li>
+<li><p>Attempted to reduce the dimensions of the vectorized dataframe through different methods.</p>
+<ul>
+<li><p>NMF: Non-Negative Matrix Factorization: Finds two non-negative matrices (W, H) whose product approximates the non-negative matrix X.</p>
+<ul>
+<li><p>Worked fine for logistic regression, naive bayes, and the support vector machine.</p></li>
+</ul>
+</li>
+<li><p>Truncated SVD: This transformer performs linear dimensionality reduction by means of truncated singular value decomposition (SVD).</p>
+<ul>
+<li><p>Produces negative values which does not work for the naive bayes model but worked fine for the logistic regression and the SVM.</p></li>
+</ul>
+</li>
+<li><p>We compared the use of each dimensionality reduction to the models where we do not use dimensionality reduction and while it reduces computation time, the reduction does not produce better results in terms of precision, recall or F1 score.</p></li>
+</ul>
+</li>
+<li><p>Removed uncommon words that appear in less than 5% of the documents.</p>
+<ul>
+<li><p>This allows us to speed up computation time by removing words that will have little effect on classifying the document into one of the types of fraud, solely due to the infrequency of the word.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="modeling">
+<h3>MODELING<a class="headerlink" href="#modeling" title="Permalink to this headline">¶</a></h3>
+<p>Since our last progress report, we:</p>
+<ul class="simple">
+<li><p>Decided upon a modeling metric to look at in order to determine which models we prefer.</p>
+<ul>
+<li><p>The modeling metric we decided to use is Weighted Average Precision. We chose a weighted average over a macro average due to the imbalance in size between classes.</p></li>
+<li><p>Comparing this metric for all the models allows us to determine which models are “better” when doing cross validation to choose hyperparameters.</p></li>
+</ul>
+</li>
+<li><p>Opted to not use the balanced class weights parameter in our models.</p>
+<ul>
+<li><p>In our last progress update, we mentioned the possible use of the balanced class weights parameter which would allow the model to better capture smaller classes. However we showed our results to the sponsors who said that the decrease in total accuracy is not worth the increase in accuracy for the smaller classes.</p></li>
+</ul>
+</li>
+<li><p>Still have not moved on to other models as we are still working on cross-validating in order to tune hyperparameters for our existing models</p></li>
+</ul>
+</div>
+<div class="section" id="validation">
+<h3>VALIDATION<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h3>
+<p>Since our last progress report, we implemented a grid search cross-validation for all of our models.</p>
+<ul class="simple">
+<li><p>For naive bayes, we consider the following hyperparameters:</p>
+<ul>
+<li><p>A smoothing parameter for additive smoothing or no smoothing</p></li>
+<li><p>A parameter whether to learn class prior probabilities or to assume a uniform prior</p></li>
+</ul>
+</li>
+<li><p>For linear regression, we consider the following hyperparameters:</p>
+<ul>
+<li><p>Regularization parameter</p></li>
+<li><p>ElasticNet ratio for Lasso regression, Ridge regression or a combination of both penalties</p></li>
+</ul>
+</li>
+<li><p>For our SVM classifier, we consider the following hyperparameters:</p>
+<ul>
+<li><p>Regularization parameter</p></li>
+<li><p>Kernel type</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
